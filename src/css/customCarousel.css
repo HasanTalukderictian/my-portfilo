@@ -1,0 +1,16 @@
+.carousel .control-arrow {
+    background: none;
+    border-radius: 50%;
+    border: 2px solid white;
+    padding: 10px;
+    color: black;
+    font-size: 24px;
+}
+
+.carousel .control-arrow:hover {
+    background: #f0f0f0;
+}
+
+.carousel .slide{
+    margin-left: 4px !important;
+}
