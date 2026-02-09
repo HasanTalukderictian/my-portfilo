@@ -1,5 +1,6 @@
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import '../css/tooltip.css';
+import '../css/banner.css';
 import { useEffect, useState } from 'react';
 
 const Banner = () => {
@@ -35,7 +36,7 @@ const Banner = () => {
         <div
             id="banner"
             className="flex flex-col md:flex-row min-h-[90vh] pt-6 md:pt-10 bg-gray-100"
-           
+
         >
             {/* Left Text Content */}
             <div className="flex-1 flex flex-col items-start justify-start pl-10 pt-20 md:pt-16">
@@ -123,7 +124,7 @@ const Banner = () => {
                 </div>
 
                 <p>
-                    
+
                 </p>
 
 
@@ -171,16 +172,36 @@ const Banner = () => {
 
 
 
-            {/* Right Circular Image */}
-            <div className="flex-1 flex items-center justify-center">
-                <div className="relative rounded-full w-96 h-96 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 p-2 shadow-lg">
+
+            <div className="flex-1 flex items-center justify-center relative">
+
+                {/* Background Big Text */}
+                <h1 className="bg-text">Web</h1>
+                <h1 className="bg-text">Developer</h1>
+
+                {/* Main Image */}
+                <div className="image-wrapper">
                     <img
-                        src="/src/image/hasan.jpg"
+                        src="https://i.postimg.cc/K1VLv0NS/hasan2.png"
                         alt="Hasan Talukder"
-                        className="rounded-full object-cover w-full h-full border-4 border-white shadow-md transform transition-transform duration-300 hover:scale-110"
+                        className="profile-img"
                     />
                 </div>
+
+                {/* Bottom Outline Text */}
+                <h2 className="outline-text">
+                    Software Engineer
+                </h2>
+
             </div>
+
+
+
+
+
+
+
+
         </div>
     );
 };
