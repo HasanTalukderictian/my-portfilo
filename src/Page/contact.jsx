@@ -1,8 +1,8 @@
 const Contact = ({ id }) => {
     return (
-        <div id={id} className="flex flex-col md:flex-row justify-between items-start p-12 bg-gray-900 text-white">
+        <div id={id} className="flex flex-col md:flex-row justify-between items-start p-12 bg-gray-100 text-white">
             {/* Left section: Connect with me */}
-            <div className="mt-4 md:w-1/2 mb-8 md:mb-0">
+            <div className="mt-4 md:w-1/2 mb-8 md:mb-0 text-black">
                 <h2 className="text-xl font-semibold mb-4">Connect with me:</h2>
                 <p className="mb-4">Satisfied with me? Please contact me</p>
                <p className="mb-4"> <i className="fas fa-phone"></i> 01768712230</p>
@@ -34,7 +34,7 @@ const Contact = ({ id }) => {
 
             {/* Right section: Contact Form */}
             <div className="md:w-1/2">
-                <h2 className="text-xl font-semibold mb-4">
+                <h2 className="text-xl font-semibold mb-4 text-black">
                     Contact me, let's make magic together
                 </h2>
                 <form className="space-y-4">

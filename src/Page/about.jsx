@@ -32,7 +32,7 @@ const About = ({ id }) => { // Accept id prop
                     {/* Cards Wrapper */}
                     <div className="grid md:grid-cols-1 gap-6">
                         {/* Card */}
-                        <div className="bg-[#dfe4eb] rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300">
+                        <div className="bg-gray-100 rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300">
                             <div className="flex flex-col md:flex-row items-center text-center md:text-left">
 
                                 {/* Years of Experience */}

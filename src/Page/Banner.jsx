@@ -34,12 +34,12 @@ const Banner = () => {
     return (
         <div
             id="banner"
-            className="flex flex-col md:flex-row min-h-[90vh] pt-6 md:pt-10"
-            style={{ backgroundColor: "#dfe4eb" }}
+            className="flex flex-col md:flex-row min-h-[90vh] pt-6 md:pt-10 bg-gray-100"
+           
         >
             {/* Left Text Content */}
             <div className="flex-1 flex flex-col items-start justify-start pl-10 pt-20 md:pt-16">
-                <h2 className="text-red-500 text-2xl md:text-4xl font-serif lg:text-4xl font-semibold mt-4">
+                <h2 className="text-red-500 mt-2 text-2xl md:text-4xl font-serif lg:text-4xl font-semibold mt-4">
                     Hi
                 </h2>
 
@@ -58,7 +58,7 @@ const Banner = () => {
                 <p className="text-gray-700 text-base md:text-lg leading-relaxed mt-5">
                     I'm a Web Designer & Developer passionate about creating error-free websites with 100% client satisfaction.
                     I love learning, sharing knowledge, and solving real-world problems. I primarily work with React JS, JavaScript,
-                    Express JS, MongoDB, and other modern technologies.
+                    Laravel, Mysql, and other modern technologies.
                 </p>
 
                 {/* Social Media Icons */}

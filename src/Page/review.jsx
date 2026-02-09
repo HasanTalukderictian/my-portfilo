@@ -5,23 +5,25 @@ import '../css/customCarousel.css'; // Custom CSS for arrows
 // Review component accepts dynamic content through props
 const Review = ({ image, title, description, badges }) => {
   return (
-    <div className="card bg-gray-800 w-80 sm:w-96 shadow-xl sm:m-2 lg:m-1 border-yellow-500 border-4">
+    <div className="card bg-gray-100 w-52 sm:w-80 shadow-xl sm:m-2 lg:m-1 border-yellow-500 border-4 rounded-xl overflow-hidden">
       {/* Circular image container */}
       <figure className="flex justify-center items-center p-4">
-        <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden border-4 border-yellow-500">
+        <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden border-4 border-yellow-500">
           <img src={image} alt={title} className="w-full h-full object-cover" />
         </div>
       </figure>
-      <div className="card-body text-white">
+
+      <div className="card-body text-black text-left">
         <h2 className="card-title font-bold text-lg sm:text-xl">{title}</h2>
-        <p className="text-sm sm:text-base">{description}</p>
-        <div className="card-actions justify-end">
+        <p className="text-sm sm:text-base mt-1">{description}</p>
+        <div className="card-actions justify-start mt-2 flex-wrap gap-2">
           {badges.map((badge, index) => (
             <div key={index} className="badge badge-outline">{badge}</div>
           ))}
         </div>
       </div>
     </div>
+
   );
 };
 
@@ -72,8 +74,8 @@ const ReviewCarousel = () => {
   };
 
   return (
-    <div id="review" className="container mx-auto bg-gray-800 p-4 sm:p-7">
-      <h2 className="text-2xl sm:text-3xl font-bold text-center mb-4 sm:mb-8 text-white">Clients Review</h2>
+    <div id="review" className="container mx-auto bg-[#F4F1E6] p-4 sm:p-7">
+      <h2 className="text-2xl sm:text-3xl font-bold text-center mb-4 sm:mb-8 text-black">Clients Review</h2>
       <Carousel
         showArrows={true}
         autoPlay={true}
