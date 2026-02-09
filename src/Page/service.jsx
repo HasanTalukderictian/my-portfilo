@@ -1,6 +1,5 @@
-
-
-
+import React from 'react';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Service = () => {
     // List of services
@@ -38,19 +37,30 @@ const Service = () => {
     ];
 
     return (
-        <div className="bg-gray-900 text-white py-12 px-4">
+        <div className="bg-[#F4F1E6] text-white py-12 px-4">
             <div className="max-w-6xl mx-auto">
-                <h2 className="text-3xl font-bold text-center text-purple-300 mb-8">The services I offer :</h2>
+                <h2 className="text-3xl font-bold text-center text-purple-300 mb-8">
+                    The services I offer :
+                </h2>
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {services.map((service, index) => (
                         <div
                             key={index}
-                            className="bg-gray-800 hover:bg-purple-500 p-6 rounded-lg text-center transition-all duration-300 border border-purple-500"
+                            className="group bg-gray-800 hover:bg-purple-500 p-6 rounded-lg text-center transition-all duration-300 border border-purple-500"
                         >
-                            <i className={`${service.icon} text-4xl mb-4 text-purple-300`}></i>
-                            <h4 className="text-xl font-semibold text-purple-300 mb-2">{service.title}</h4>
-                            <p className="text-gray-400">{service.description}</p>
+                            {/* Icon */}
+                            <i className={`${service.icon} text-4xl mb-4 text-purple-300 group-hover:text-white transition-colors duration-300`}></i>
+                            
+                            {/* Title */}
+                            <h4 className="text-xl font-semibold text-purple-300 mb-2 group-hover:text-white transition-colors duration-300">
+                                {service.title}
+                            </h4>
+                            
+                            {/* Description */}
+                            <p className="text-gray-400 group-hover:text-white transition-colors duration-300">
+                                {service.description}
+                            </p>
                         </div>
                     ))}
                 </div>

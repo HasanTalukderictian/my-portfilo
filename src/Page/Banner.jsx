@@ -39,18 +39,18 @@ const Banner = () => {
         >
             {/* Left Text Content */}
             <div className="flex-1 flex flex-col items-start justify-start pl-10 pt-20 md:pt-16">
-                <h2 className="text-red-500 text-2xl md:text-4xl font-serif lg:text-4xl font-semibold">
+                <h2 className="text-red-500 text-2xl md:text-4xl font-serif lg:text-4xl font-semibold mt-4">
                     Hi
                 </h2>
 
-                <h1 className="text-3xl font-bold mt-1">
+                <h1 className="text-3xl font-bold mt-4">
                     <span className="text-primary">I AM</span> Hasan Talukder, a Full Stack
                 </h1>
 
 
                 {/* Typing Effect Text with Gradient */}
 
-                <h3 className="text-4xl md:text-5xl font-extrabold mt-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-transparent bg-clip-text">
+                <h3 className="text-4xl md:text-5xl font-extrabold mt-5 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-transparent bg-clip-text">
                     {displayText}
                     <span className="animate-pulse text-black font-thin ml-1">|</span>
                 </h3>
@@ -63,11 +63,11 @@ const Banner = () => {
 
                 {/* Social Media Icons */}
                 <div className='mt-10 mb-8'>
-                    <h3 className="font-sans font-bold text-lg text-[#171613]">
+                    <h3 className="font-sans font-bold text-lg mt-5 text-[#171613]">
                         Find on me
                     </h3>
 
-                    <div className="flex space-x-4 mt-6 mb-2">
+                    <div className="flex space-x-4 mt-8 mb-2">
                         {/* Facebook */}
                         <div className="tooltip-container">
                             <a
