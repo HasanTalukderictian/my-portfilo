@@ -182,7 +182,7 @@ const Banner = () => {
                 {/* Main Image */}
                 <div className="image-wrapper">
                     <img
-                        src="https://i.postimg.cc/K1VLv0NS/hasan2.png"
+                        src="https://i.ibb.co.com/hJ7GM2jK/Me.png"
                         alt="Hasan Talukder"
                         className="profile-img"
                     />

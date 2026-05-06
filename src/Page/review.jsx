@@ -31,32 +31,38 @@ const ReviewCarousel = () => {
   // Define an array of review data
   const reviews = [
     {
-      image: "src/image/clients/client1.jpg",
+      image: "https://i.ibb.co.com/Cp1CbgfC/client1.jpg",
       title: "Mamun",
       description: "Excellent work man.",
       badges: ["Fashion", "Products"],
     },
     {
-      image: "src/image/clients/client2.jpg",
+      image: "https://i.ibb.co.com/KcxRPqDc/client2.jpg",
       title: "Sharif",
       description: "Reallay Pleased with your Work.",
       badges: ["Accessories", "Fashion"],
     },
     {
-      image: "src/image/clients/client3.jpg",
+      image: "https://i.ibb.co.com/7tc7Pfb8/client3.jpg",
       title: "Faruk Ahmed",
       description: "Quick and smart design man!.",
       badges: ["Fashion", "Accessories"],
     },
     {
-      image: "src/image/clients/client5.jpg",
+      image: "https://i.ibb.co.com/Q7q8dcBG/client4.jpg",
       title: "Rafiq Khan",
       description: "Thanks for the best Output.",
       badges: ["Fashion", "Luxury"],
     },
     {
-      image: "src/image/clients/client6.jpg",
+      image: "https://i.ibb.co.com/nMh3YdBj/client5.jpg",
       title: "Raju Ahamed",
+      description: "Keep doing Good Work.",
+      badges: ["Luxury", "Fashion"],
+    },
+    {
+      image: "https://i.ibb.co.com/39S0Yz8T/client6.jpg",
+      title: "Habib Mirza",
       description: "Keep doing Good Work.",
       badges: ["Luxury", "Fashion"],
     },

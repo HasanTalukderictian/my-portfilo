@@ -66,26 +66,28 @@ const About = ({ id }) => { // Accept id prop
                                                 target="_blank"
                                                 rel="noopener noreferrer"
                                                 className="text-black no-underline">
+                                                Akashbari Holidays
+                                            </a>
+                                        </p>
+                                        <p className="text-lg text-black mb-1 font-bold">Software Engineer</p>
+                                        <p className="text-[#139bfd] font-bold">2026 to Present</p>
+                                    </div>
+
+                                    {/* Card for Paperfly */}
+                                    <div className="bg-white border-2 border-gray-200 rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300 text-left">
+                                        <p className="text-xl font-bold text-black mb-2">
+                                            <a href="https://paperfly.com.bd"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-black no-underline">
                                                 Paperfly Private
                                             </a>
                                         </p>
                                         <p className="text-lg text-black mb-1 font-bold">Software Engineer</p>
-                                        <p className="text-[#139bfd] font-bold">2024 to Present</p>
+                                        <p className="text-[#139bfd] font-bold">2024 to 2025</p>
                                     </div>
 
-                                    {/* Card for Wetech Digital */}
-                                    <div className="bg-white border-2 border-gray-200 rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300 text-left">
-                                        <p className="text-xl font-bold text-black mb-2">
-                                            <a href="https://wetechdigital.com/"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="text-black no-underline">
-                                                Wetech Digital
-                                            </a>
-                                        </p>
-                                        <p className="text-lg text-black mb-1 font-bold">Software Engineer</p>
-                                        <p className="text-[#139bfd] font-bold">01/08/2023 to 01/06/2024</p>
-                                    </div>
+                                   
 
                                     {/* Card for F3 Solution */}
                                     <div className="bg-white border-2 border-gray-200 rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300 text-left">
@@ -95,6 +97,20 @@ const About = ({ id }) => { // Accept id prop
                                                 rel="noopener noreferrer"
                                                 className="text-black no-underline">
                                                 F3 Solution Limited
+                                            </a>
+                                        </p>
+                                        <p className="text-lg text-black mb-1 font-bold">Software Engineer</p>
+                                        <p className="text-[#139bfd] font-bold">01/08/2023 to 01/06/2024</p>
+                                    </div>
+
+                                     {/* Card for Wetech Digital */}
+                                    <div className="bg-white border-2 border-gray-200 rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300 text-left">
+                                        <p className="text-xl font-bold text-black mb-2">
+                                            <a href="https://wetechdigital.com/"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-black no-underline">
+                                                Wetech Digital
                                             </a>
                                         </p>
                                         <p className="text-lg text-black mb-1 font-bold">Software Engineer</p>

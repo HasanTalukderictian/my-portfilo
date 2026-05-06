@@ -2,12 +2,12 @@ import { useState } from 'react';
 
 const Project = ({ id }) => {
     const projects = [
-        { id: 1, title: "Gift Place", description: "I created this personal project to show how to create an interface using Figma as an example.", link: "https://giftpalacebd.com/", img: "/src/image/pic.png" },
-        { id: 2, title: "Rigers Group", description: "What was your role, your deliverables, if the project was personal, freelancing.", link: "https://ridersgroupbd.com/", img: "/src/image/pic1.png" },
-        { id: 3, title: "Trust Sports", description: "Description for project 3.", link: "https://trustsportsbd.com/", img: "/src/image/trust.png" },
-        { id: 4, title: "School Management", description: "Description for project 4.", link: "https://school.wetechdigital.com/", img: "/src/image/school.png" },
-        { id: 5, title: "Fashionia", description: "Description for project 5.", link: "http://fashionia.recycleshop.xyz/", img: "/src/image/pic4.png" },
-        { id: 6, title: "Project 6", description: "Description for project 6.", link: "#", img: "/src/image/pic5.png" }
+        { id: 1, title: "Gift Place", description: "I created this personal project to show how to create an interface using Figma as an example.", link: "https://giftpalacebd.com/", img: "https://i.ibb.co.com/DPjqjg1y/Gemini-Generated-Image-ahdpj2ahdpj2ahdp.png" },
+        { id: 2, title: "Rigers Group", description: "What was your role, your deliverables, if the project was personal, freelancing.", link: "https://ridersgroupbd.com/", img: "https://i.ibb.co.com/cSxQRKdC/Rigers.png" },
+        { id: 3, title: "BD Stall", description: "Description for project 3.", link: "https://bdstall.akashbariholidays.org/", img: "https://i.ibb.co.com/0V68cjnx/Ecommerce-Banner.png" },
+        { id: 4, title: "School Management", description: "Description for project 4.", link: "https://school.wetechdigital.com/", img: "https://i.ibb.co.com/NkNThhV/School-Picture.png" },
+        { id: 5, title: "Employee Management System", description: "Description for project 5.", link: "https://ems-crm.netlify.app/", img: "https://i.ibb.co.com/bMNK9gdR/Gemini-Generated-Image-6n4law6n4law6n4l.png" },
+        { id: 6, title: "Visa Management CRM", description: "Description for project 6.", link: "https://crm.akashbariholidays.org/", img: "https://i.ibb.co.com/PZYS3t6v/Gemini-Generated-Image-y1smp7y1smp7y1sm.png" }
     ];
 
     const projectsPerPage = 3;
