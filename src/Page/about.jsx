@@ -1,190 +1,161 @@
 import { useState } from 'react';
 import CountUp from 'react-countup';
 
-const About = ({ id }) => { // Accept id prop
-    const [selectedCol, setSelectedCol] = useState(null); // Track selected column
+const About = ({ id }) => {
+    const [selectedCol, setSelectedCol] = useState(null);
 
-    // Data for skills
     const skills = [
-        { name: 'UI & UX Designing', icon: 'fas fa-paint-brush' },
-        { name: 'Web Development', icon: 'fas fa-code' },
-        { name: 'Mobile Development', icon: 'fas fa-mobile-alt' },
-        { name: 'Web Scraping with Python', icon: 'fas fa-laptop-code' },
+        { name: 'UI & UX Designing', icon: 'fas fa-paint-brush', description: 'User-centered design solutions' },
+        { name: 'Web Development', icon: 'fas fa-code', description: 'Modern web applications' },
+        { name: 'Mobile Development', icon: 'fas fa-mobile-alt', description: 'Cross-platform apps' },
+        { name: 'Web Scraping with Python', icon: 'fas fa-laptop-code', description: 'Data extraction & automation' },
+    ];
+
+    const experiences = [
+        { company: "Akashbari Holidays", role: "Software Engineer", period: "2026 to Present", link: "#" },
+        { company: "Paperfly Private", role: "Software Engineer", period: "2024 to 2025", link: "#" },
+        { company: "F3 Solution Limited", role: "Software Engineer", period: "2023 to 2024", link: "#" },
+        { company: "Wetech Digital", role: "Software Engineer", period: "2023 to 2024", link: "#" },
+    ];
+
+    const stats = [
+        { icon: "fas fa-briefcase", label: "Projects", value: 12, suffix: "+", color: "from-blue-500 to-cyan-500" },
+        { icon: "fas fa-users", label: "Clients", value: 120, suffix: "+", color: "from-green-500 to-emerald-500" },
+        { icon: "fas fa-trophy", label: "Awards", value: 5, suffix: "", color: "from-yellow-500 to-orange-500" },
+        { icon: "fas fa-globe-americas", label: "Countries", value: 15, suffix: "+", color: "from-purple-500 to-pink-500" },
     ];
 
     return (
-        <div id={id} className="bg-[#F4F1E6] text-white py-12 px-4"> {/* Apply id here */}
-            <div className="max-w-6xl mx-auto">
-                {/* About Me Section */}
-                <div className="mb-12 mt-4 text-center md:text-left">
-                    <h2 className="text-3xl font-bold text-purple-300 mb-4 text-center mb-2">About me :</h2>
-                    <p className="text-lg mb-6 mb-2 text-black">
-                        Hi, my name is Hasan Talukder, I am a Fullstack web developer, Software designer, and Mobile developer.
+        <div id={id} className="w-full py-16 px-4" style={{ backgroundColor: '#F4F1E6' }}>
+            <div className="max-w-7xl mx-auto">
+                
+                {/* Header */}
+                <div className="text-center mb-12">
+                    <div className="inline-block px-4 py-1 bg-purple-100 rounded-full mb-3">
+                        <span className="text-purple-600 text-sm font-semibold">Get to Know Me</span>
+                    </div>
+                    <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-3">
+                        About <span className="text-purple-600">Me</span>
+                    </h2>
+                    <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
+                </div>
+
+                {/* Bio Card */}
+                <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 mb-10">
+                    <p className="text-gray-700 text-base md:text-lg leading-relaxed text-center">
+                        Hi, my name is <span className="font-bold text-purple-600">Hasan Talukder</span>, I am a 
+                        <span className="font-semibold text-gray-800"> Fullstack web developer</span>, 
+                        <span className="font-semibold text-gray-800"> Software designer</span>, and 
+                        <span className="font-semibold text-gray-800"> Mobile developer</span>.
                         I have honed my skills in Web Development and have a core understanding of advanced UI design principles.
-                        Here are the major skills I have:
                     </p>
                 </div>
 
+                {/* Experience Banner */}
+                <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl shadow-lg p-6 mb-10">
+                    <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                        <div className="flex items-center gap-5">
+                            <div className="text-5xl md:text-6xl font-bold text-white">
+                                <CountUp start={0} end={3} duration={2} suffix="+" />
+                            </div>
+                            <div className="text-white">
+                                <p className="font-bold text-lg">Years of Experience</p>
+                                <p className="text-purple-100 text-sm">Specialized in building apps & web solutions</p>
+                            </div>
+                        </div>
+                        <div className="flex gap-1">
+                            {[...Array(3)].map((_, i) => (
+                                <div key={i} className={`w-2 h-2 rounded-full ${i === 0 ? 'bg-white' : 'bg-white/40'}`}></div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
+                {/* Stats Section */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-12">
+                    {stats.map((stat, idx) => (
+                        <div key={idx} className="bg-white rounded-xl shadow-md p-4 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group">
+                            <div className={`w-12 h-12 mx-auto rounded-full bg-gradient-to-r ${stat.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}>
+                                <i className={`${stat.icon} text-white text-xl`}></i>
+                            </div>
+                            <div className="text-2xl md:text-3xl font-bold text-gray-800">
+                                <CountUp start={0} end={stat.value} duration={2.5} suffix={stat.suffix} />
+                            </div>
+                            <p className="text-gray-500 text-sm mt-1">{stat.label}</p>
+                        </div>
+                    ))}
+                </div>
+
                 {/* Experience Section */}
-                <div className="p-6">
-
-
-                    {/* Cards Wrapper */}
-                    <div className="grid md:grid-cols-1 gap-6">
-                        {/* Card */}
-                        <div className="bg-gray-100 rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300">
-                            <div className="flex flex-col md:flex-row items-center text-center md:text-left">
-
-                                {/* Years of Experience */}
-                                <h3 className="text-5xl font-bold text-black mb-4 md:mb-0 md:mr-6">
-                                    <CountUp start={0} end={3} duration={2} suffix="+" />
-                                </h3>
-
-                                {/* Experience Description */}
-                                <p className="text-lg md:mr-6 text-black">
-                                    Years of experience. Specialized in building apps, while ensuring a seamless web experience for end users.
-                                </p>
-                            </div>
-
-                            {/* Experience Section */}
-
-
-                            <div className="p-6">
-                                {/* Section Heading */}
-                                <h2 className="text-3xl md:text-4xl font-bold text-black mb-6 flex items-center space-x-2">
-                                    <span className="text-[#139bfd] text-2xl">🛠️</span>
-                                    <span>My Experience</span>
-                                </h2>
-
-                                {/* Cards Wrapper */}
-                                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-                                    {/* Card for Paperfly */}
-                                    <div className="bg-white border-2 border-gray-200 rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300 text-left">
-                                        <p className="text-xl font-bold text-black mb-2">
-                                            <a href="https://paperfly.com.bd"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="text-black no-underline">
-                                                Akashbari Holidays
-                                            </a>
-                                        </p>
-                                        <p className="text-lg text-black mb-1 font-bold">Software Engineer</p>
-                                        <p className="text-[#139bfd] font-bold">2026 to Present</p>
-                                    </div>
-
-                                    {/* Card for Paperfly */}
-                                    <div className="bg-white border-2 border-gray-200 rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300 text-left">
-                                        <p className="text-xl font-bold text-black mb-2">
-                                            <a href="https://paperfly.com.bd"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="text-black no-underline">
-                                                Paperfly Private
-                                            </a>
-                                        </p>
-                                        <p className="text-lg text-black mb-1 font-bold">Software Engineer</p>
-                                        <p className="text-[#139bfd] font-bold">2024 to 2025</p>
-                                    </div>
-
-                                   
-
-                                    {/* Card for F3 Solution */}
-                                    <div className="bg-white border-2 border-gray-200 rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300 text-left">
-                                        <p className="text-xl font-bold text-black mb-2">
-                                            <a href="https://f3solution.com/"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="text-black no-underline">
-                                                F3 Solution Limited
-                                            </a>
-                                        </p>
-                                        <p className="text-lg text-black mb-1 font-bold">Software Engineer</p>
-                                        <p className="text-[#139bfd] font-bold">01/08/2023 to 01/06/2024</p>
-                                    </div>
-
-                                     {/* Card for Wetech Digital */}
-                                    <div className="bg-white border-2 border-gray-200 rounded-xl shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300 text-left">
-                                        <p className="text-xl font-bold text-black mb-2">
-                                            <a href="https://wetechdigital.com/"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="text-black no-underline">
-                                                Wetech Digital
-                                            </a>
-                                        </p>
-                                        <p className="text-lg text-black mb-1 font-bold">Software Engineer</p>
-                                        <p className="text-[#139bfd] font-bold">01/08/2023 to 01/06/2024</p>
-                                    </div>
-
-                                </div>
-                            </div>
-
-
+                <div className="mb-12">
+                    <div className="flex items-center gap-2 mb-6">
+                        <div className="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center">
+                            <span className="text-purple-600 text-sm">💼</span>
                         </div>
-
-
-
+                        <h3 className="text-xl font-bold text-gray-800">Work Experience</h3>
                     </div>
-
-
-                    {/* Animated Numbers Section */}
-                    <div className="flex flex-wrap gap-10 justify-center md:justify-start mb-12 mt-8">
-
-                        {/* Number of Projects */}
-                        <div className="text-center">
-                            <i className="fas fa-briefcase text-black text-4xl mb-2"></i>
-                            <h3 className="text-xl md:text-2xl font-bold text-purple-300 mb-2">Number of Projects</h3>
-                            <p className="text-2xl text-black font-bold">
-                                <CountUp start={0} end={12} duration={3} suffix="+" />
-                            </p>
-                        </div>
-
-                        {/* Number of Clients */}
-                        <div className="text-center">
-                            <i className="fas fa-users text-black text-4xl mb-2"></i>
-                            <h3 className="text-xl md:text-2xl font-bold text-purple-300 mb-2">Number of Clients</h3>
-                            <p className="text-2xl text-black font-bold">
-                                <CountUp start={0} end={120} duration={3} suffix="+" />
-                            </p>
-                        </div>
-
-                        {/* Number of Awards */}
-                        <div className="text-center">
-                            <i className="fas fa-trophy text-black text-4xl mb-2"></i>
-                            <h3 className="text-xl md:text-2xl font-bold text-purple-300 mb-2">Number of Awards</h3>
-                            <p className="text-2xl text-black font-bold">
-                                <CountUp start={0} end={5} duration={3} suffix="+" />
-                            </p>
-                        </div>
-
-                        {/* Countries Reached */}
-                        <div className="text-center">
-                            <i className="fas fa-globe-americas text-black text-4xl mb-2"></i>
-                            <h3 className="text-xl md:text-2xl font-bold text-purple-300 mb-2">Countries Reached</h3>
-                            <p className="text-2xl text-black font-bold">
-                                <CountUp start={0} end={15} duration={3} suffix="+" />
-                            </p>
-                        </div>
-
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+                        {experiences.map((exp, idx) => (
+                            <a
+                                key={idx}
+                                href={exp.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group bg-white rounded-xl shadow-md p-5 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border-l-4 border-l-purple-500"
+                            >
+                                <h4 className="font-bold text-gray-800 text-base mb-1 group-hover:text-purple-600 transition-colors">
+                                    {exp.company}
+                                </h4>
+                                <p className="text-gray-600 text-sm font-medium mb-2">{exp.role}</p>
+                                <span className="inline-block text-xs font-semibold px-2 py-1 bg-purple-50 text-purple-600 rounded-full">
+                                    {exp.period}
+                                </span>
+                            </a>
+                        ))}
                     </div>
+                </div>
 
-
-                    {/* Skills Grid */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                {/* Skills Section */}
+                <div>
+                    <div className="flex items-center gap-2 mb-6">
+                        <div className="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center">
+                            <span className="text-purple-600 text-sm">⚡</span>
+                        </div>
+                        <h3 className="text-xl font-bold text-gray-800">Core Skills</h3>
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
                         {skills.map((skill, index) => (
                             <div
                                 key={index}
-                                className={`p-6 rounded-md text-center cursor-pointer ${selectedCol === index ? 'bg-purple-500' : 'bg-gray-700'
-                                    } hover:bg-purple-500 transition-all`}
-                                onClick={() => setSelectedCol(index)} // Set selected column
+                                className={`
+                                    group rounded-xl p-5 text-center cursor-pointer transition-all duration-300
+                                    ${selectedCol === index 
+                                        ? 'bg-gradient-to-r from-purple-600 to-pink-600 shadow-xl' 
+                                        : 'bg-white shadow-md hover:shadow-xl'}
+                                `}
+                                onClick={() => setSelectedCol(index)}
                             >
-                                <i className={`${skill.icon} text-4xl mb-4`}></i>
-                                <h4 className="text-xl font-semibold">{skill.name}</h4>
+                                <div className={`
+                                    w-14 h-14 mx-auto rounded-full flex items-center justify-center mb-3 transition-all duration-300
+                                    ${selectedCol === index 
+                                        ? 'bg-white/20 text-white' 
+                                        : 'bg-purple-50 text-purple-600 group-hover:bg-purple-100'}
+                                `}>
+                                    <i className={`${skill.icon} text-2xl`}></i>
+                                </div>
+                                <h4 className={`font-bold text-base mb-1 ${selectedCol === index ? 'text-white' : 'text-gray-800'}`}>
+                                    {skill.name}
+                                </h4>
+                                <p className={`text-xs ${selectedCol === index ? 'text-purple-100' : 'text-gray-500'}`}>
+                                    {skill.description}
+                                </p>
                             </div>
                         ))}
                     </div>
                 </div>
+
+                {/* Font Awesome CDN - Add to index.html or head */}
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
             </div>
         </div>
     );

@@ -12,16 +12,16 @@ import Review from "./review";
 const Home = () => {
     return (
         <div className="max-w-screen-xl mx-auto">
-              <Navbar id="home"/>
-              <Banner id="banner"/>
-               <About id="about"/>
-              <Skill  id="skill"/>
-              <Service id="service" />
-              <Project id="project" />
-              <Review id="review" />
-              <Contact id="contact"/>
-                 <Footer/>
-             
+            <Navbar id="home" />
+            <Banner id="banner" />
+            <About id="about" />
+            <Skill id="skill" />
+            <Service id="service" />
+            <Project id="project" />
+            <Review id="review" />
+            <Contact id="contact" />
+            <Footer />
+
         </div>
     );
 };
