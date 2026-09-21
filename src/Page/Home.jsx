@@ -1,18 +1,20 @@
-import About from "./about";
-import Banner from "./Banner";
-import Navbar from "./Navbar";
-import Project from "./project";
-import Service from "./service";
-import Skill from "./Skil";
-import Footer from "./footer";
-import Contact from "./contact";
-import Review from "./review";
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import '../css/theme.css';
 
+import Navbar from './Navbar';
+import Banner from './Banner';
+import About from './about';
+import Skill from './Skil';
+import Service from './service';
+import Project from './project';
+import Review from './review';
+import Contact from './contact';
+import Footer from './footer';
 
 const Home = () => {
     return (
-        <div className="max-w-screen-xl mx-auto">
-            <Navbar id="home" />
+        <div className="bg-white">
+            <Navbar />
             <Banner id="banner" />
             <About id="about" />
             <Skill id="skill" />
@@ -21,7 +23,6 @@ const Home = () => {
             <Review id="review" />
             <Contact id="contact" />
             <Footer />
-
         </div>
     );
 };

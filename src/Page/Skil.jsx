@@ -1,79 +1,137 @@
-import React, { useState, useEffect } from 'react';
-import '@fortawesome/fontawesome-free/css/all.min.css';
-import CountUp from 'react-countup';
+// import React, { useState, useEffect } from 'react';
+// import '@fortawesome/fontawesome-free/css/all.min.css';
+// import CountUp from 'react-countup';
 
-// Define your skills
+// // Define your skills
+// const skills = [
+//   { name: 'React', percentage: 70, icon: 'fab fa-react' },
+//   { name: 'Laravel', percentage: 70, icon: 'fab fa-laravel' },
+//   { name: 'PHP', percentage: 80, icon: 'fab fa-php' },
+//   { name: 'HTML/CSS', percentage: 90, icon: 'fab fa-html5' },
+//   { name: 'Tailwind CSS', percentage: 90, icon: 'fab fa-css3-alt' },
+//   { name: 'Javascript', percentage: 90, icon: 'fab fa-js' },
+//   { name: 'MySQL', percentage: 70, icon: 'fas fa-database' },
+//   { name: 'Restful API', percentage: 60, icon: 'fas fa-cogs' },
+// ];
+
+// const SkillItem = ({ name, percentage, icon }) => {
+//   const [width, setWidth] = useState(0);
+
+//   useEffect(() => {
+//     const timer = setTimeout(() => {
+//       setWidth(percentage);
+//     }, 300);
+
+//     return () => clearTimeout(timer);
+//   }, [percentage]);
+
+//   return (
+//     <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 mb-4 mt-4">
+//       {/* Icon + Skill Name */}
+//       <div className="flex items-center space-x-3 mb-2 md:mb-0">
+//         <i className={`${icon} text-3xl text-black`}></i>
+//         <span className="font-semibold text-black text-lg">{name}</span>
+//       </div>
+
+//       {/* Progress Bar */}
+//       <div className="flex-1 md:mx-4 w-full">
+//         <div className="relative h-3 bg-gray-300 rounded overflow-hidden">
+//           <div
+//             className="h-full rounded transition-all duration-1000"
+//             style={{
+//               width: `${width}%`,
+//               background: 'linear-gradient(90deg, #4f46e5, #3b82f6, #06b6d4)',
+//             }}
+//           ></div>
+//         </div>
+//       </div>
+
+//       {/* Percentage */}
+//       <span className="font-semibold text-black text-lg">
+//         <CountUp start={0} end={percentage} duration={2} suffix="%" />
+//       </span>
+//     </div>
+//   );
+// };
+
+// const Skill = () => {
+//   return (
+//     <div className="bg-gray-100 shadow-md p-8 mx-auto ">
+//       <h2 className="text-3xl md:text-4xl font-bold text-black mb-8 text-center relative">
+//         MY <span className="text-blue-600">SKILLS</span>
+//         <div className="absolute left-1/2 transform -translate-x-1/2 bottom-[-10px] w-1/5 h-1 bg-blue-600 rounded"></div>
+//       </h2>
+
+//       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+//         {skills.map((skill, index) => (
+//           <SkillItem
+//             key={index}
+//             name={skill.name}
+//             percentage={skill.percentage}
+//             icon={skill.icon}
+//           />
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Skill;
+
+import { useEffect, useState } from 'react';
+import SectionTitle from './SectionTitle';
+
 const skills = [
-  { name: 'React', percentage: 70, icon: 'fab fa-react' },
-  { name: 'Laravel', percentage: 70, icon: 'fab fa-laravel' },
-  { name: 'PHP', percentage: 80, icon: 'fab fa-php' },
-  { name: 'HTML/CSS', percentage: 90, icon: 'fab fa-html5' },
-  { name: 'Tailwind CSS', percentage: 90, icon: 'fab fa-css3-alt' },
-  { name: 'Javascript', percentage: 90, icon: 'fab fa-js' },
-  { name: 'MySQL', percentage: 70, icon: 'fas fa-database' },
-  { name: 'Restful API', percentage: 60, icon: 'fas fa-cogs' },
+    { name: 'React', percentage: 70, icon: 'fab fa-react' },
+    { name: 'Laravel', percentage: 70, icon: 'fab fa-laravel' },
+    { name: 'PHP', percentage: 80, icon: 'fab fa-php' },
+    { name: 'HTML / CSS', percentage: 90, icon: 'fab fa-html5' },
+    { name: 'Tailwind CSS', percentage: 90, icon: 'fab fa-css3-alt' },
+    { name: 'JavaScript', percentage: 90, icon: 'fab fa-js' },
+    { name: 'MySQL', percentage: 70, icon: 'fas fa-database' },
+    { name: 'REST API', percentage: 60, icon: 'fas fa-cogs' },
 ];
 
 const SkillItem = ({ name, percentage, icon }) => {
-  const [width, setWidth] = useState(0);
+    const [width, setWidth] = useState(0);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setWidth(percentage);
-    }, 300);
+    useEffect(() => {
+        const timer = setTimeout(() => setWidth(percentage), 300);
+        return () => clearTimeout(timer);
+    }, [percentage]);
 
-    return () => clearTimeout(timer);
-  }, [percentage]);
-
-  return (
-    <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 mb-4 mt-4">
-      {/* Icon + Skill Name */}
-      <div className="flex items-center space-x-3 mb-2 md:mb-0">
-        <i className={`${icon} text-3xl text-black`}></i>
-        <span className="font-semibold text-black text-lg">{name}</span>
-      </div>
-
-      {/* Progress Bar */}
-      <div className="flex-1 md:mx-4 w-full">
-        <div className="relative h-3 bg-gray-300 rounded overflow-hidden">
-          <div
-            className="h-full rounded transition-all duration-1000"
-            style={{
-              width: `${width}%`,
-              background: 'linear-gradient(90deg, #4f46e5, #3b82f6, #06b6d4)',
-            }}
-          ></div>
+    return (
+        <div>
+            <div className="mb-2 flex items-center justify-between">
+                <span className="flex items-center gap-3 font-semibold text-slate-900">
+                    <i className={`${icon} w-5 text-center text-teal-700`}></i>
+                    {name}
+                </span>
+                <span className="text-sm font-medium text-slate-500">{percentage}%</span>
+            </div>
+            <div className="h-2 overflow-hidden rounded-full bg-slate-200">
+                <div
+                    className="h-full rounded-full bg-teal-700 transition-all duration-1000 ease-out"
+                    style={{ width: `${width}%` }}
+                ></div>
+            </div>
         </div>
-      </div>
-
-      {/* Percentage */}
-      <span className="font-semibold text-black text-lg">
-        <CountUp start={0} end={percentage} duration={2} suffix="%" />
-      </span>
-    </div>
-  );
+    );
 };
 
-const Skill = () => {
-  return (
-    <div className="bg-gray-100 shadow-md p-8 mx-auto ">
-      <h2 className="text-3xl md:text-4xl font-bold text-black mb-8 text-center relative">
-        MY <span className="text-blue-600">SKILLS</span>
-        <div className="absolute left-1/2 transform -translate-x-1/2 bottom-[-10px] w-1/5 h-1 bg-blue-600 rounded"></div>
-      </h2>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {skills.map((skill, index) => (
-          <SkillItem
-            key={index}
-            name={skill.name}
-            percentage={skill.percentage}
-            icon={skill.icon}
-          />
-        ))}
-      </div>
-    </div>
-  );
+const Skill = ({ id = 'skill' }) => {
+    return (
+        <section id={id} className="bg-white px-5 py-20">
+            <div className="mx-auto max-w-6xl">
+                <SectionTitle title="My skills" subtitle="The tools I use most, day to day." />
+                <div className="grid gap-x-16 gap-y-7 md:grid-cols-2">
+                    {skills.map((skill) => (
+                        <SkillItem key={skill.name} {...skill} />
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
 };
 
 export default Skill;
